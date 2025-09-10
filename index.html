@@ -8,7 +8,7 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #4a216b, #6b2d87); /* Attractive gradient inspired by purple background */
+            background: linear-gradient(135deg, #4a216b, #6b2d87);
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -37,18 +37,19 @@
         }
         .header .nav a {
             color: white;
-            margin-left: 20px;
+            margin-left: 15px;
             text-decoration: none;
             font-size: 1.1em;
             transition: color 0.3s;
         }
         .header .nav a:hover {
-            color: #ffd700; /* Gold hover effect for attractiveness */
+            color: #ffd700;
         }
         .search-container {
             text-align: center;
             margin: 40px 0;
-            width: 60%;
+            width: 90%;
+            max-width: 600px;
             background: rgba(255, 255, 255, 0.9);
             padding: 20px;
             border-radius: 10px;
@@ -57,14 +58,14 @@
         .search-container h2 {
             margin: 0 0 20px 0;
             color: #4a216b;
-            font-size: 2.5em;
+            font-size: 2em;
             font-weight: bold;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
         }
         .search-container input[type="text"] {
             width: 70%;
             padding: 12px;
-            font-size: 1.2em;
+            font-size: 1.1em;
             border: 2px solid #4a216b;
             border-radius: 5px 0 0 5px;
             outline: none;
@@ -74,8 +75,8 @@
             border-color: #6b2d87;
         }
         .search-container button {
-            padding: 12px 25px;
-            font-size: 1.2em;
+            padding: 12px 20px;
+            font-size: 1.1em;
             border: none;
             background-color: #4a216b;
             color: white;
@@ -88,59 +89,60 @@
         }
         .categories {
             display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 20px;
-            padding: 40px 20px;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            padding: 20px;
+            width: 90%;
             max-width: 1200px;
-            width: 100%;
         }
         .category {
             text-align: center;
-            padding: 20px;
+            padding: 15px;
             background: white;
             border-radius: 10px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s, box-shadow 0.3s;
         }
         .category:hover {
-            transform: translateY(-10px);
+            transform: translateY(-5px);
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
         }
         .category img {
-            width: 50px;
-            height: 50px;
-            margin-bottom: 15px;
+            width: 40px;
+            height: 40px;
+            margin-bottom: 10px;
             filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.1));
         }
         .category h3 {
             margin: 0;
             color: #4a216b;
-            font-size: 1.3em;
+            font-size: 1.1em;
             font-weight: 600;
         }
         .popular-articles {
+            width: 90%;
             max-width: 1200px;
-            width: 100%;
             padding: 20px;
             background: white;
             border-radius: 10px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            margin-top: 20px;
+            margin: 20px 0;
         }
         .popular-articles h2 {
             color: #4a216b;
-            font-size: 1.7em;
+            font-size: 1.5em;
             margin-bottom: 15px;
             font-weight: bold;
         }
         .popular-articles ul {
             list-style-type: disc;
             padding-left: 20px;
+            columns: 1;
         }
         .popular-articles li {
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             color: #333;
-            font-size: 1.1em;
+            font-size: 1em;
         }
         .popular-articles li a {
             color: #6b2d87;
@@ -159,11 +161,47 @@
             margin: 20px;
             border: 1px solid #ffeeba;
             border-radius: 5px;
-            width: 60%;
+            width: 90%;
+            max-width: 600px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
         .alert a {
             color: #856404;
+            text-decoration: underline;
+        }
+        .need-help {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 90%;
+            max-width: 1200px;
+        }
+        .need-help div {
+            text-align: center;
+            flex: 1;
+            padding: 0 10px;
+        }
+        .need-help h3 {
+            color: #4a216b;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        .need-help p {
+            color: #666;
+            margin: 0;
+            font-size: 0.9em;
+        }
+        .need-help a {
+            color: #0066cc;
+            text-decoration: none;
+            display: block;
+            margin-top: 10px;
+        }
+        .need-help a:hover {
             text-decoration: underline;
         }
         .cookie-consent {
@@ -176,12 +214,12 @@
             margin-top: auto;
         }
         .cookie-consent button {
-            padding: 8px 20px;
-            margin: 0 10px;
+            padding: 8px 15px;
+            margin: 0 5px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 1.1em;
+            font-size: 1em;
             transition: background-color 0.3s, transform 0.2s;
         }
         .cookie-consent .disagree {
@@ -206,10 +244,10 @@
             right: 20px;
             background-color: #4a216b;
             color: white;
-            padding: 10px 20px;
+            padding: 5px 10px;
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            font-size: 1em;
+            font-size: 0.9em;
         }
         .cookie-policy a {
             color: white;
@@ -218,6 +256,144 @@
         }
         .cookie-policy a:hover {
             color: #ffd700;
+        }
+        .footer {
+            background-color: #4a216b;
+            color: white;
+            width: 100%;
+            text-align: center;
+            padding: 10px 0;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .footer a {
+            color: white;
+            text-decoration: underline;
+            margin-left: 10px;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+            .header .nav {
+                position: static;
+                margin-top: 10px;
+            }
+            .header .nav a {
+                margin: 0 10px;
+                font-size: 1em;
+            }
+            .search-container {
+                width: 85%;
+                margin: 20px 0;
+            }
+            .search-container h2 {
+                font-size: 1.5em;
+            }
+            .search-container input[type="text"] {
+                width: 60%;
+                font-size: 1em;
+            }
+            .search-container button {
+                padding: 10px 15px;
+                font-size: 1em;
+            }
+            .categories {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+                padding: 10px;
+            }
+            .category {
+                padding: 10px;
+            }
+            .category img {
+                width: 30px;
+                height: 30px;
+            }
+            .category h3 {
+                font-size: 0.9em;
+            }
+            .popular-articles {
+                width: 85%;
+                padding: 15px;
+            }
+            .popular-articles h2 {
+                font-size: 1.3em;
+            }
+            .popular-articles ul {
+                columns: 1;
+            }
+            .popular-articles li {
+                font-size: 0.9em;
+            }
+            .alert {
+                width: 85%;
+                padding: 10px;
+            }
+            .need-help {
+                flex-direction: column;
+                width: 85%;
+                padding: 15px;
+            }
+            .need-help div {
+                margin-bottom: 15px;
+            }
+            .need-help h3 {
+                font-size: 1em;
+            }
+            .cookie-consent {
+                padding: 10px;
+            }
+            .cookie-consent button {
+                padding: 6px 10px;
+                font-size: 0.9em;
+            }
+            .cookie-policy {
+                bottom: 10px;
+                right: 10px;
+                padding: 3px 8px;
+                font-size: 0.8em;
+            }
+            .footer {
+                padding: 5px 0;
+            }
+            .footer a {
+                margin-left: 5px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 1.5em;
+            }
+            .search-container {
+                width: 90%;
+            }
+            .search-container h2 {
+                font-size: 1.2em;
+            }
+            .search-container input[type="text"] {
+                width: 50%;
+                font-size: 0.9em;
+            }
+            .search-container button {
+                padding: 8px 12px;
+                font-size: 0.9em;
+            }
+            .categories {
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+            }
+            .popular-articles {
+                width: 90%;
+            }
+            .need-help {
+                width: 90%;
+            }
+            .cookie-consent button {
+                display: block;
+                margin: 5px auto;
+            }
         }
     </style>
 </head>
@@ -235,6 +411,7 @@
         <button type="button">🔍</button>
     </div>
     <div class="alert">
+        [Resolved] Roku App Issues - Service is restored. If apps still don't load, please perform a system restart. Settings > System > Power > System Restart <a href="#">More Info</a>
     </div>
     <div class="categories">
         <div class="category">
@@ -285,6 +462,18 @@
             <li><a href="#">Connect your phone to a Roku TV system or streaming player</a></li>
         </ul>
     </div>
+    <div class="need-help">
+        <div>
+            <h3>Chat with us</h3>
+            <p>Get answers to your questions, or be connected to a Roku advisor for more help.</p>
+            <a href="#">Start chatting</a>
+        </div>
+        <div>
+            <h3>Ask the Roku community</h3>
+            <p>Post questions, join discussions, and learn from other Roku users and experts.</p>
+            <a href="#">Check it out</a>
+        </div>
+    </div>
     <div class="cookie-consent">
         Our website uses cookies and similar technologies, including for personalization, advertising and analytics purposes, as described in our Cookie settings. By selecting agree, you consent to our use of these cookies and technologies. You can update this selection at any time using our Cookie Consent Tool.
         <button class="disagree">Disagree</button>
@@ -292,6 +481,9 @@
     </div>
     <div class="cookie-policy">
         <a href="#">Cookie Policy</a>
+    </div>
+    <div class="footer">
+        Stay updated on news and offers
     </div>
 
     <script>
@@ -305,7 +497,6 @@
             alert('You have disagreed to cookies. Some features may be limited.');
         });
 
-        // Add hover effect to categories
         const categories = document.querySelectorAll('.category');
         categories.forEach(category => {
             category.addEventListener('mouseover', () => {
@@ -315,157 +506,8 @@
                 category.style.backgroundColor = 'white';
             });
         });
-    </script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roku Support</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
-        }
-        .header {
-            background-color: #4a216b;
-            color: white;
-            padding: 20px;
-            text-align: center;
-            width: 100%;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        .header h1 {
-            margin: 0;
-            font-size: 2.5em;
-            font-weight: bold;
-        }
-        .content {
-            max-width: 1200px;
-            width: 100%;
-            padding: 20px;
-            background-color: white;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-top: 20px;
-            border-radius: 5px;
-        }
-        .popular-articles h2 {
-            color: #4a216b;
-            font-size: 1.5em;
-            margin-bottom: 10px;
-        }
-        .popular-articles ul {
-            list-style-type: disc;
-            padding-left: 20px;
-            columns: 3;
-            -webkit-columns: 3;
-            -moz-columns: 3;
-        }
-        .popular-articles li {
-            margin-bottom: 10px;
-            color: #333;
-        }
-        .popular-articles li a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-        .popular-articles li a:hover {
-            text-decoration: underline;
-        }
-        .need-help {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 30px;
-            padding: 20px;
-            background-color: #f9f9f9;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-        .need-help div {
-            text-align: center;
-            flex: 1;
-        }
-        .need-help h3 {
-            color: #4a216b;
-            font-size: 1.2em;
-            margin-bottom: 10px;
-        }
-        .need-help p {
-            color: #666;
-            margin: 0;
-        }
-        .need-help a {
-            color: #0066cc;
-            text-decoration: none;
-            display: block;
-            margin-top: 10px;
-        }
-        .need-help a:hover {
-            text-decoration: underline;
-        }
-        .footer {
-            background-color: #4a216b;
-            color: white;
-            width: 100%;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            bottom: 0;
-            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-        }
-        .footer a {
-            color: white;
-            text-decoration: underline;
-            margin-left: 10px;
-        }
-        .cookie-policy {
-            position: fixed;
-            bottom: 60px;
-            right: 20px;
-            background-color: #4a216b;
-            color: white;
-            padding: 5px 10px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        .cookie-policy a {
-            color: white;
-            text-decoration: underline;
-        }
-    </style>
-</head>
-<body>
-    <div class="header">
-        
-        <div class="need-help">
-            <div>
-                <h3>Chat with us</h3>
-                <p>Get answers to your questions, or be connected to a Roku advisor for more help.</p>
-                <a href="#">Start chatting</a>
-            </div>
-            <div>
-                <h3>Ask the Roku community</h3>
-                <p>Post questions, join discussions, and learn from other Roku users and experts.</p>
-                <a href="#">Check it out</a>
-            </div>
-        </div>
-    </div>
-    <div class="cookie-policy">
-        <a href="#">Cookie Policy</a>
-    </div>
-    <div class="footer">
-        Stay updated on news and offers
-    </div>
 
-    <script>
-        // Add smooth scroll for links
+        // Smooth scroll for links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
