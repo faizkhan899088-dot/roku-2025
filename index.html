@@ -286,7 +286,6 @@
             }
             .search-container {
                 width: 85%;
-                margin: 20px 0;
             }
             .search-container h2 {
                 font-size: 1.5em;
@@ -486,6 +485,20 @@
         Stay updated on news and offers
     </div>
 
+    <!-- Tawk.to Live Chat Widget Integration -->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function() {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/YOUR_PROPERTY_ID/YOUR_WIDGET_ID';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+    <!-- End Tawk.to Live Chat Widget -->
+
     <script>
         document.querySelector('.search-container button').addEventListener('click', function() {
             alert('Search functionality to be implemented!');
@@ -507,7 +520,6 @@
             });
         });
 
-        // Smooth scroll for links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
